@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* RESET */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Variables */
+
+:root {
+    /* Colors */
+    --primary-yellow: hsl(47, 88%, 63%);
+    --white: hsl(0 0 100%);
+    --gray: hsl(0, 0%, 50%);
+    --black: hsl(0 0% 7%);
+
+    /* Typography */
+    --fs-p: 16px;
+    --ff: Figtree, sans-serif;
+    --fw-500: 500;
+    --fw-800: 800;
+
+    /* shadow */
+    --box-shadow: 10px 10px;
+    --box-shadow-hover: 15px 15px;
+}
+
+/* General */
+
+/* body * {
+    outline: 1px dashed red;
+} */
+
+body {
+    background-color: var(--primary-yellow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: var(--ff);
+    color: var(--black);
+    font-weight: var(--fw-500);
+    font-size: var(--fs-p);
+}
+
+main>* {
+    margin: 1rem 0;
+}
+
+.card {
+    border: 1px solid var(--black);
+    width: min(370px, 90vw);
+    background-color: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+.illustration {
+    margin-top: .25rem;
+    border-radius: 15px;
+    height: 201px;
+    background-image: url(./assets/images/illustration-article.svg);
+    background-position: center;
+}
+
+/* .figure__illustration {
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
+} */
+
+h1 {
+    font-size: 1.25rem;
+    font-weight: var(--fw-800);
+}
+
+.learning {
+    display: inline-block;
+    background-color: var(--primary-yellow);
+    padding: .4em 1rem;
+    border-radius: 7px;
+    font-weight: var(--fw-800);
+    margin: 1rem 0 0.25rem;
+}
+
+.published {
+    margin: 1rem 0;
+}
+
+.info {
+    color: var(--gray);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    height: 35px;
+    margin: 1.5rem 0 0;
+}
+
+.avatar {
+    display: inline-block;
+    height: 100%;
+    width: auto;
+}
+
+.name {
+    margin-left: 10px;
+    font-weight: var(--fw-800);
+}
+
+.attribution {
+    position: fixed;
+    bottom: 10px;
+}
+
+.card:hover {
+    cursor: pointer;
+    box-shadow: var(--box-shadow-hover);
+
+    h1 {
+        color: var(--primary-yellow);
+    }
+}
+
+@media (max-width: 375px) {
+    :root {
+        --fs-p: 14px;
+    }
+}
