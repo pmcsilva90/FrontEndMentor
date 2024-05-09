@@ -97,7 +97,7 @@ img {
     font-size: clamp(1.75rem, 2.4rem, 9.173vw);
     color: var(--dark-charcoal);
     margin: 1rem 0;
-    font-weight: var(--fw-700);
+    font-weight: var(--fw-600);
 }
 
 .preparation {
