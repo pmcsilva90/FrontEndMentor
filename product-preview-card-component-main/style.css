@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+.img-mobile {
+  display: none;
+}
+
+html {
+  font-size: clamp(10px, 14px, min(3.125vh, 3.73vw));
+  font-family: Montserrat, sans-serif;
+  line-height: 1.65;
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  margin: auto;
+  width: 600px;
+  height: min(450px, 90vh);
+  background-color: hsl(0, 0%, 100%);
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+article {
+  height: 100%;
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main > * {
+  flex-basis: 50%;
+}
+
+.type {
+  text-transform: uppercase;
+  letter-spacing: 0.35rem;
+  font-size: 0.857rem;
+}
+
+.name, .new {
+  font-family: Fraunces, sans-serif;
+  font-size: 2.25rem;
+  line-height: 1;
+}
+
+.new {
+  color: hsl(158, 36%, 37%);
+  font-weight: 700;
+}
+
+.old {
+  text-decoration: line-through;
+  font-size: 0.928rem;
+}
+
+.type, .description, .old {
+  color: hsl(228, 12%, 48%);
+}
+
+.description {
+  margin-top: 14px;
+}
+
+.prices {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 14px;
+}
+
+.cart-icon {
+  height: 100%;
+  width: auto;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  background-color: hsl(158, 36%, 37%);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1.143rem 0;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  margin-top: 14px;
+}
+
+button:hover {
+  background-color: #1a4031;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    height: 100vh;
+    justify-content: center;
+  }
+  .img-desktop {
+    display: none;
+  }
+  .img-mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  main {
+    flex-direction: column;
+    justify-content: start;
+    width: 91.5vw;
+    min-height: fit-content;
+    height: 611px;
+    margin: 2rem;
+    border-radius: 10px;
+  }
+  main > * {
+    flex-basis: auto;
+  }
+  article {
+    padding: 1.75rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
