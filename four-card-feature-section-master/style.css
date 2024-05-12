@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* VARIABLES */
+
+:root{
+    /* ## Colors */
+    
+    /* ### Primary */
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    
+    /* ### Neutral */
+    
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+    
+    /* ## Typography */
+    
+    /* ### Body Copy */
+    
+    --fs: 0.9375rem;
+    
+    /* ### Fonts */
+    
+    --ff: Poppins, sans-serif;
+    --fw-200: 200;
+    --fw-400: 400;
+    --fw-600: 600;
+}
+    
+/* RESET */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    display: block;
+}
+
+body{
+    font-size: var(--fs);
+    font-family: var(--ff);
+    font-weight: var(--fw-400);
+    background-color: var(--very-light-gray);
+    color: var(--grayish-blue);
+    line-height: 1.775;
+}
+
+main{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 100vh;
+}
+
+.intro {
+    margin: 0 auto 1rem;
+    text-align: center;
+    max-width: 55ch;
+}
+
+.intro__h1{
+    font-weight: var(--fw-200);
+    color: var(--very-dark-blue);
+    font-size: clamp(1.1875rem, 2.25rem, 6.4vw);
+    line-height: 1.5;
+    margin-bottom: 1rem
+}
+
+.intro__p{
+    line-height: 1.5;
+}
+
+.bold {
+    display: block;
+    font-weight: var(--fw-600);
+}
+
+.card__h2{
+    font-size: 1.25rem;
+    font-weight: var(--fw-600);
+    color: var(--very-dark-blue);
+    margin-bottom: 0.34375rem;
+}
+
+.card__p{
+    font-size: 0.8125rem;
+    margin-bottom: 38px;
+}
+
+.cards {
+    margin: 0 auto;
+    max-width: 1110px;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+        '. two .'
+        'one two four'
+        'one three four'
+        '. three .';
+}
+
+.card {
+    box-shadow: 0 5px 20px -5px var(--grayish-blue);
+    border-radius: 5px;
+    padding: 24px 2rem;
+}
+
+.one {
+    grid-area: one;
+    border-top: 4px solid var(--cyan);
+}
+
+.two{
+    grid-area: two;
+    border-top: 4px solid var(--red);
+}
+
+.three{
+    grid-area: three;
+    border-top: 4px solid var(--orange);
+}
+
+.four{
+    grid-area: four;
+    border-top: 4px solid var(--blue);
+}
+
+.card-icon{
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: 0.5625rem;
+    width: 15vw;
+    max-width: fit-content;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .intro {
+        margin: 3rem auto 4.5rem;
+
+    }
+    .cards{
+        display: flex;
+        flex-direction: column;
+    }
+    .card__h2{
+        margin-bottom: 0rem;
+    }
+    .card__p{
+        margin-bottom: 1.25rem;
+    }
+    
+}
